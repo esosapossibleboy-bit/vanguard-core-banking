@@ -1,0 +1,17 @@
+# 📦 Ignore heavy local node modules toolboxes
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# 🎨 Ignore compiled frontend build production folders
+frontend/dist/
+
+# 💾 Ignore live local database states (Keep transactional data private!)
+backend/vanguardBankingVault.db
+
+# ⚙️ System Logs, Environments & Configuration Cache
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
