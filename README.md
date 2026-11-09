@@ -1,6 +1,6 @@
 # 🏛️ VanguardCore: Sovereign Banking Ingestion & Settlement Engine 🌍
 
-VanguardCore is an industrial-scale, bank-grade **Core Banking Ingestion & Settlement Engine**. Designed to act as an unalterable ledger baseline layer for open-banking networks and commercial clearhouses, the platform completely prevents financial data leaks or balance pollution by processing transactions through absolute **Immutable Accounting Matrices** and cryptographic hashing verifications.
+VanguardCore is an industrial-scale, bank-grade **Core Banking Ingestion & Settlement Engine**. Designed to act as an unalterable ledger baseline layer for open-banking networks and commercial clearinghouses, the platform completely prevents financial data leaks or balance pollution by processing transactions through absolute **Immutable Accounting Matrices** and cryptographic hashing verifications.
 
 ---
 
@@ -13,7 +13,9 @@ vanguard-core-banking/
 ├── backend/                        # 🏰 Sovereign Core Clearinghouse API Node
 │   ├── node_modules/               # Installed server tool dependencies
 │   ├── database.js                 # Permanent Ledger Stream Storage Engine (LokiJS)
+│   ├── isoCompiler.js              # Year 2 ISO 20022 XML Message Serialization Module
 │   ├── coreBanking.test.js         # Automated Double-Entry Ingestion Integrity Tests
+│   ├── isoCompiler.test.js         # Automated ISO Schema Verification Test Suite
 │   ├── server.js                   # Express Ingestion Gates & Unified Production Bridge
 │   └── package.json                # Backend manifest configuration checklist
 │
@@ -22,6 +24,7 @@ vanguard-core-banking/
     │   ├── App.jsx                 # Master Command Hub Workspace Screen Controller
     │   ├── App.test.jsx            # Frontend Integration Event Interaction Tests
     │   ├── LedgerSettlePanel.jsx   # Decoupled Inbound Settlement Form Component
+    │   ├── IsoMessagingConsole.jsx # Decoupled ISO 20022 XML Serialization Component
     │   ├── setupTests.js           # Headless JSDOM Browser Vocabulary Definitions
     │   └── main.jsx
     ├── dist/                       # Compressed high-performance production build assets
@@ -35,7 +38,7 @@ vanguard-core-banking/
 
 VanguardCore scales systematically across three highly complex architectural milestones:
 * **Year 1 (Active Production Core):** Immutable double-entry ledger stream cogs, cryptographic SHA-256 block signatures, and full-stack single-port production bridges.
-* **Year 2 (Clearinghouse Layer):** Real-Time Ingestion Path networks and automated compilation mapping into standard **ISO 20022 Financial Messaging protocols**.
+* **Year 2 (Clearinghouse Layer):** Real-Time Ingestion Path networks and automated compilation mapping into standard **ISO 20022 Financial Messaging protocols (`pacs.008.001.10`)**.
 * **Year 3 (Liquidity Engine):** Distributed High-Throughput Liquidity Pools and Multi-Currency cross-border clearing mesh networks.
 
 ---
@@ -75,6 +78,3 @@ npm start
 ### 3. Open the Bank Operator Desk Panel
 Open your internet browser and navigate directly to your single-port enterprise portal address:
 👉 **http://localhost:3000/**
-
-* **Test Liquidity Defenses:** Input an asymmetrical transfer amount (e.g., Dr: $5,000, Cr: $4,500) into the form panel. The live indicator will instantly display a warning: `❌ ASYMMETRICAL LIQUIDITY DRIFT` and lock down execution buttons.
-* **Execute Balanced Commits:** Align the inputs so they balance perfectly. Click **🔒 Reconcile & Commit Block rows**. The system will instantly lock the database, generate a permanent record block, and output an unalterable SHA-256 verification hash directly onto your live dashboard feed!
